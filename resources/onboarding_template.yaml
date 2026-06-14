@@ -1,0 +1,50 @@
+# =============================================================================
+# Nouf Squad Onboarding Configuration — Workspace Template
+# =============================================================================
+#
+# This file is used to configure your organization and project preferences.
+# When Phase 0 Auto-Discovery is executed, this configuration is generated at the
+# project root as `onboarding.yaml` (which is typically gitignored).
+#
+
+# -----------------------------------------------------------------------------
+# Company & Business Information
+# -----------------------------------------------------------------------------
+company:
+  name: "Your Company"
+  domain: "e-commerce"               # e.g., e-commerce, fintech, saas
+  monetization_model: "subscription"  # e.g., subscription, marketplace, transactional
+  core_value_proposition: ""
+  prevent_leakage: true              # Ensures Mizan flags potential transaction leakage
+
+# -----------------------------------------------------------------------------
+# Tech Stack Specifications
+# -----------------------------------------------------------------------------
+tech_stack:
+  language: "TypeScript"             # Primary language (discovered during Phase 0)
+  framework: "Next.js"               # Frontend framework
+  backend: "Node.js"                 # Backend runtime
+  database: "PostgreSQL"             # Database system
+  testing_framework: "Jest"          # Unit testing framework
+  e2e_framework: "Playwright"        # E2E test runner
+  styling: "Vanilla CSS"             # CSS framework / style setup
+  rtl_support: true                  # Whether Right-to-Left styling is required
+
+# -----------------------------------------------------------------------------
+# Quality Gates & Execution Safety Limits
+# -----------------------------------------------------------------------------
+quality_gates:
+  rework_limit: 3                    # Max re-work attempts before escalating to user
+  command_timeout_seconds: 30        # Max execution time for terminal commands
+  anti_stale_testing: true           # Enable strict UI state transition checks
+  require_agdr: true                 # Require Agent Decision Records for arch changes
+  test_coverage_target_percent: 80
+
+# -----------------------------------------------------------------------------
+# Tools & Platforms Wires
+# -----------------------------------------------------------------------------
+integrations:
+  project_management: "GitHub Issues" # Issues tracker (e.g., GitHub, Linear, Jira)
+  designs: "Figma"
+  communication: "Slack"
+  documentation: "Wiki"
